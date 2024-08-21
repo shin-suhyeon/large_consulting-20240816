@@ -35,7 +35,6 @@ body {
     padding: 30px;
 }
 /* 공통 선택자 */
-
 .affiliate_service_btm [class*="detail"],
 .advertising_product_btm [class*="detail"],
 .advertising_agency_btm [class*="detail"],
@@ -49,7 +48,14 @@ body {
     gap: 20px;
     flex-direction: column;
 }
-.large_consulting > div:not(.marketing_viral) {
+.large_consulting_mid_banner,
+.large_consulting_wrap{
+    border-radius: 8px;
+    border: 1px solid black;
+    background-color: red;
+}
+
+.large_consulting > div:not(.marketing_viral):not(.large_consulting_mid_banner):not(.large_consulting_wrap) {
     background-color: white;
     border-radius: 8px;
 }
@@ -76,7 +82,6 @@ body {
     height: 33px;
     margin-right: 18px;
     font-weight: 500;
-
 } 
 .agency_request_btm5 a{
     color:  #C8C8C8;
@@ -87,7 +92,6 @@ body {
 }
 .large_consulting_mid_banner a img {
     height: 125px;
-    border: 1px solid black;
     width: 100%;
 }
 /* 스와이퍼 */
@@ -95,7 +99,6 @@ body {
     width: 820px;
 }
 .swiper-slide img{
-    border: 1px solid black;
     height: 245px;
     border-radius: 8px;
     background-size: cover;
@@ -123,14 +126,12 @@ body {
 .marketing_solutions_tap a{
     margin-right: 15px;
 }
-
-
 .tab-content img{
     width: 50px;
     height: 50px;
     border-radius: 8px;
     margin-right: 20px;
-    
+
 }
 .tab-content em{
     color: #888;
@@ -143,7 +144,6 @@ body {
     font-weight: 600;
     margin-bottom: 20px;
 }
-
 .tab-content {
     display: none;
 }
@@ -192,9 +192,6 @@ body {
     transition: border-color 0.3s ease;
 }
 /* 제휴서비스 */
-.affiliate_service_btm {
-    margin-top: 20px;
-}
 .affiliate_service_1 ,
 .affiliate_service_2 ,
 .affiliate_service_3 {
@@ -214,7 +211,6 @@ body {
 .affiliate_service_btm [class*="detail"]{
     margin-left: 10px;
     display: flex;
-    
     flex-flow: row wrap;
     height: 45px;
     margin-top: 14px;
@@ -224,7 +220,6 @@ body {
     font-size: 14px;
     color: #888 ;
     font-weight: 500;
-
 }
 .affiliate_service_btm p {
     font-size: 15px;
@@ -260,7 +255,7 @@ body {
 .marketing_services_btm{
     margin-top: 15px;
 }
-/* 마,바 마지막 줄 마진삭제 */
+/* 마케팅,바이럴 마지막 줄 마진삭제 */
 .marketing_services_btm a:nth-last-child(1),
 .viral_services_btm a:nth-last-child(1) {
     margin: 0;
@@ -294,19 +289,16 @@ body {
     justify-content: space-between;
     gap: 20px;
 }
-
 .marketing_services,
 .viral_services{
     width: calc(50% - 54px);
     background-color: white;
     border-radius: 8px;
 }
-
 /* 쪼잔뱅기들 */
 .advertising_pd{ 
     padding: 30px 45px 25px 25px;
     display: flex;
-    
 }
 .advertising_product_btm span,
 .advertising_agency_btm span {
@@ -314,11 +306,6 @@ body {
     color: #888;
 }
 /* 대행의뢰,마케팅서비스, 바이럴 서비스 밑줄 */
-.agency_request_btm a:hover, 
-.marketing_services_btm a:hover, 
-.viral_services_btm a:hover {
-    text-decoration: underline;
-}
 .agency_request_btm a:hover, 
 .marketing_services_btm a:hover, 
 .viral_services_btm a:hover {
