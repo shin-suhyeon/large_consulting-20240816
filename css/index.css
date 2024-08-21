@@ -51,8 +51,6 @@ body {
 .large_consulting_mid_banner,
 .large_consulting_wrap{
     border-radius: 8px;
-    border: 1px solid black;
-    background-color: red;
 }
 
 .large_consulting > div:not(.marketing_viral):not(.large_consulting_mid_banner):not(.large_consulting_wrap) {
