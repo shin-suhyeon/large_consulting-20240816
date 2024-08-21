@@ -156,15 +156,7 @@ body {
     display: flex;
     justify-content: space-between;
 }
-.advertising_agency_1,
-.advertising_agency_2,
-.advertising_agency_3,
-.marketing_solutions_1,
-.marketing_solutions_2,
-.marketing_solutions_3,
-.advertising_product_1,
-.advertising_product_2,
-.advertising_product_3 {
+.consulting_tap_line {
     display: flex;
 }
 .adverising_product_tap a:nth-child(2),
@@ -339,15 +331,7 @@ body {
     flex-direction: column;
     gap: 15px;
 }
-.advertising_product_1,
-.advertising_product_2,
-.advertising_product_3 ,
-.advertising_agency_1,
-.advertising_agency_2,
-.advertising_agency_3 ,
-.marketing_solutions_1,
-.marketing_solutions_2,
-.marketing_solutions_3 {
+.consulting_tap_line {
 display: flex;
 justify-content: space-between;
 gap: 15px;
