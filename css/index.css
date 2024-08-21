@@ -98,8 +98,9 @@ body {
 }
 .swiper-slide img{
     height: 245px;
-    border-radius: 8px;
     background-size: cover;
+    width: 100%;
+    border-radius: 8px;
 }
 .swiper {
     width: 100%;
@@ -117,7 +118,6 @@ body {
     border-radius: 20px;
     width: calc(33%);
     border: 1px solid #E4E4E4;
-    display: flex;
 }
 .adverising_product_tap a,
 .advertising_agency_tap a,
