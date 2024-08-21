@@ -34,6 +34,9 @@ body {
 .large_consulting_pd30{
     padding: 30px;
 }
+.affiliate_service_btm{
+    margin-top: 20px;
+}
 /* 공통 선택자 */
 .affiliate_service_btm [class*="detail"],
 .advertising_product_btm [class*="detail"],
@@ -81,6 +84,7 @@ body {
     margin-right: 18px;
     font-weight: 500;
 } 
+/* 마감된 대행의뢰 */
 .agency_request_btm5 a{
     color:  #C8C8C8;
 }
@@ -247,6 +251,7 @@ body {
     font-size: 14px;
     align-items: center;
     justify-content: center;
+    font-weight: 400;
 }
 /* 마케팅 서비스 */
 .viral_services_btm,
