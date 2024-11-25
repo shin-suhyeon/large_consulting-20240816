@@ -5,9 +5,10 @@ body, h1, h2, h3, h4, h5, h6, th, td, input, select, textarea {
     font-size:12px;
     font-weight:normal;
     -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;}
-    body{
-        background-color: #f5f5f5;
+    -moz-osx-font-smoothing:grayscale;
+    }
+body{
+    background-color: #f5f5f5;
     }
 a {
     text-decoration: none; 
@@ -23,303 +24,85 @@ span, em {
 body {
     font-family: 'Pretendard Variable', sans-serif;
 }
-.large_consulting [class*="see_more"]{
-    width: 83px;
-    height: 30px;
-    border-radius: 6px;
-    background-color: #F3F2F6;
-    transition: background-color 0.3s ease, color 0.3s ease;
+/* 타이틀 */
+.large_consulting_title {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 600;
+    justify-content: space-between;
+    font-size: 17px;
 }
-.large_consulting strong{
-    font-size: 18px;
-    font-weight: 700;
-    align-self: center;
-}
-.large_consulting_wrap{
-    width: 822px;
-}
-.swiper-slide img{
-    border: 1px solid black;
-    width: 820px;
-    height: 245px;
-    border-radius: 6px;
-    background-size: cover;
-}
-/* 대행의뢰 섹션 */
-.agency_request {
-    width: 820px;
-    margin-top: 20px;
-    background-color:white;
-    border-radius: 6px;
-}
-.large_consulting [class*="padding30"]{
+/* padding */
+.large_consulting_pd30{
     padding: 30px;
 }
-/* 대행의뢰 상단 섹션 */
-.agency_request_top {
-    display: flex;
-    justify-content: space-between;
-}
-.large_consulting [class*="see_more"]:hover
-{
-    background-color: #e7e7e7;
-}
-/* 대행의뢰 하단 섹션 */
-.agency_request_btm [class*="agency_request_btm"] {
-    display: flex;
-    justify-content: space-between;
-}
-.agency_request_btm a {
-    margin-top: 16px;
-    font-size: 15px;
-}
-.agency_request_btm span{
-    font-size: 16px;
-    margin-top: 15px;
-    padding-right: 20px;
-    text-align: left;
-    width: 30px;
-} 
-.agency_request_btm5 a{
-    color:  #C8C8C8;
-}
-/* 중간 배너 섹션 */
-.large_consulting_mid_banner  {
-    margin: 20px 0 20px 0;
-} 
-.large_consulting_mid_banner img{
-    border-radius: 6px;
-    
-}
-.large_consulting_mid_banner a img {
-    width: 820px;
-    height: 125px;
-    border: 1px solid black;
-}
-/* 마케팅 서비스와 바이럴 서비스 섹션 */
-.marketing_viral {
-    display: flex;
-    justify-content: space-between;
-    width: 820px;
-}
-/* 배경 */
-.marketing_services,
-.viral_services {
-    background-color: white;
-    width: 400px;
-    border-radius: 6px;
-}
-/* 마케팅 서비스 섹션 */
-.marketing_services_top {
-    display: flex;
-    justify-content: space-between;
-}
-.marketing_services_top a {
-    width: 83px;
-    height: 30px;
-    border-radius: 6px;
-    background-color: #F3F2F6;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 600;
-}
-.marketing_services_btm a {
-    font-size: 15px;
-    display: block;
-    margin-top: 13px;
-    font-weight: 500;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; 
-}
-/* 바이럴 서비스 섹션 */
-.viral_services_top {
-    display: flex;
-    justify-content: space-between;
-}
-.viral_services_btm a {
-    font-size: 15px;
-    display: block;
-    margin-top: 15px;
-    font-weight: 500;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; 
-}
-/* 제휴 서비스 섹션 */
-.affiliate_service {
-    width: 820px;
-    background-color: white;
-    border-radius: 6px;
+.affiliate_service_btm{
     margin-top: 20px;
 }
-.affiliate_service_top {
-    display: flex;
-    justify-content: space-between;
-}
-.affiliate_service_btm {margin-top: 2 0px;}
-/* 제휴 서비스 첫 번째 줄 */
-.affiliate_service_1 ,
-.affiliate_service_2 ,
-.affiliate_service_3 {
-    display: flex; 
-    margin-top: 10px ;
-    justify-content: space-between ;
-}
-.affiliate_service [class*="affiliate_common_selector"]{
-    display: flex;
-    width: 360px;
-}
-.affiliate_service_btm img{
-    width: 68px;
-    height: 68px;
-    border-radius: 40px;
-}
-.affiliate_service_btm [class*="detail"]{
-    margin-left: 10px;
-    display: flex;
-    
-    flex-flow: row wrap;
-    height: 45px;
-    margin-top: 14px;
-    cursor: pointer;
-}
-.affiliate_service_btm span{
-    font-size: 14px;
-    color: #888 ;
-    font-weight: 500;
-
-}
-.affiliate_service_btm p {
-    font-size: 15px;
-    font-weight: 600;
-    margin: 0;
-    color: black;
-}
-/* 광고상품, 광고 대행사, 마케팅 솔루션 공통 선택자 */
-/* 박스라인 */
-.tab-content [class*="tab_common_selector"]{
-    border-radius: 20px;
-    width: 243px;
-    height: 145px;
-    border: 1.5px solid #E4E4E4;
-    display: block;
-    margin-bottom: 15px;
-    margin-right: 15px;
-}
-.advertising_padding,
-.advertising_agency_padding{
-    padding: 30px 45px 25px 25px;
-    display: flex;
-}
-/* 배경 */
-.advertising_product,
-.advertising_agency,
-.marketing_solutions {
-    margin-top: 20px;
-    background-color: white;
-    width: 820px;
-    border-radius: 6px;
-}
-/* 더보기 */
-.advertising_product_top a,
-.advertising_agency_top a,
-.marketing_solutions_top a  {
-    font-size: 17px;
-    font-weight: 600;
-    margin-right: 15px;
-    margin-bottom: 20px;
-}
-.adverising_product_tap a:nth-child(2),
-.adverising_product_tap a:nth-child(3),
-.advertising_agency_tap a:nth-child(1),
-.advertising_agency_tap a:nth-child(3),
-.marketing_solutions_tap a:nth-child(1),
-.marketing_solutions_tap a:nth-child(2){
-    color: #888;
-}
-.tab-content img{
-    width: 50px;
-    height: 50px;
-    border-radius: 8px;
-    margin-right: 20px;
-    
-}
-.tab-content em{
-    color: #888;
-    position: absolute;
-    left: 0;
-    top: 75px;
-    font-size: 14px;
-}
-/* 광고상품 */
-.advertising_product_1,
-.advertising_product_2,
-.advertising_product_3 {
-    display: flex;
-}
+/* 공통 선택자 */
 .affiliate_service_btm [class*="detail"],
 .advertising_product_btm [class*="detail"],
 .advertising_agency_btm [class*="detail"],
 .marketing_solutions_btm [class*="detail"]{
     position: relative;
 }
-.advertising_product_btm span {
-    font-size: 14px;
-    color: #888;
+/* 제일 큰 레이아웃 */
+.large_consulting {
+    width: 820px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
 }
-/* 광고 대행사 */
-.advertising_agency_top,
-.advertising_product_top,
-.marketing_solutions_top {
+.large_consulting_mid_banner,
+.large_consulting_wrap{
+    border-radius: 8px;
+}
+
+.large_consulting > div:not(.marketing_viral):not(.large_consulting_mid_banner):not(.large_consulting_wrap) {
+    background-color: white;
+    border-radius: 8px;
+}
+/* 대형의뢰 */
+.agency_request_btm [class*="agency_request_btm"] {
     display: flex;
     justify-content: space-between;
 }
-/* 첫 번째 줄 */
-.advertising_agency_1,
-.advertising_agency_2,
-.advertising_agency_3 {
+.agency_request_btm{
+    margin-top: 10px;
+}
+.agency_request_btm a{
     display: flex;
+    align-items: center;
+    height: 33px;
+    font-size: 15px;
+    font-weight: 500;
 }
-.advertising_agency_btm span{
-    font-size: 14px;
-    color: #888;
-}
-.advertising_agency_btm p,
-.marketing_solutions_btm p,
-.advertising_product_btm p{
-    word-wrap: break-word;
-    display: -webkit-box;
-    -webkit-line-clamp: 2; 
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.agency_request_btm span{
     font-size: 16px;
-    font-weight: 600;
-    margin: 0;
-    margin-top: 5px;
-    color: black ;
-
-    
-}
-/* 마케팅 솔루션 */
-/* 상품 리스트 */
-.marketing_solutions_1,
-.marketing_solutions_2,
-.marketing_solutions_3 {
+    font-variant-numeric: tabular-nums;
     display: flex;
+    align-items: center;
+    height: 33px;
+    margin-right: 18px;
+    font-weight: 500;
+} 
+/* 마감된 대행의뢰 */
+.agency_request_btm5 a{
+    color:  #C8C8C8;
 }
-.marketing_solutions_btm span {
-    font-size: 14px;
-    color: #888;
+/* 중간배너 */
+.large_consulting_mid_banner img{
+    border-radius: 8px;
+    height: 125px;
+    width: 100%;
+}
+/* 스와이퍼 */
+.large_consulting_wrap{
+    width: 820px;
+}
+.swiper-slide img{
+    height: 245px;
+    background-size: cover;
+    width: 100%;
+    border-radius: 8px;
 }
 .swiper {
     width: 100%;
@@ -332,98 +115,71 @@ body {
     width: 100%;
     height: 100%;
 }
+/* 탭 공통 선택자 */
+.tab_common_selector{
+    border-radius: 20px;
+    width: 33%;
+    border: 1px solid #E4E4E4;
+}
+.adverising_product_tap a,
+.advertising_agency_tap a,
+.marketing_solutions_tap a{
+    margin-right: 15px;
+}
+.tab-content img{
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    margin-right: 20px;
+
+}
+.tab-content em{
+    color: #888;
+    font-size: 14px;
+}
+.advertising_product_top a,
+.advertising_agency_top a,
+.marketing_solutions_top a  {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
 .tab-content {
     display: none;
 }
 .tab-content.active {
     display: block; 
 }
-/* agency_request_btmX 클래스의 공통 스타일 */
-/* 공통 스타일: a 태그에 기본 상태에서 밑줄 제거 */
-.agency_request_btm a {
-    text-decoration: none; 
-    position: relative; 
+.advertising_agency_top,
+.advertising_product_top,
+.marketing_solutions_top {
+    display: flex;
+    justify-content: space-between;
 }
-/* 공통 스타일: a 태그의 가상 요소로 밑줄 추가 */
-.agency_request_btm [class*="agency_request_btm"] a::after{
-    content: "";
-    position: absolute; 
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background-color: black;
-    transform: scaleX(0); 
-    transform-origin: bottom left;
-    transition: transform 0s;
-    opacity: 0; 
+.consulting_tap_line {
+    display: flex;
 }
-/* 공통 스타일: 각각의 요소에 마우스 오버 시 a 태그의 밑줄 표시 */
-.agency_request_btm [class*="agency_request_btm"]:hover a::after{
-    transform: scaleX(1); 
-    opacity: 1;
-    transition: transform 0s,; 
+.adverising_product_tap a:nth-child(2),
+.adverising_product_tap a:nth-child(3),
+.advertising_agency_tap a:nth-child(1),
+.advertising_agency_tap a:nth-child(3),
+.marketing_solutions_tap a:nth-child(1),
+.marketing_solutions_tap a:nth-child(2){
+    color: #888;
 }
-/* A마케팅 서비스  HOVER */ 
-.marketing_services_btm a {
-    text-decoration: none;
-    position: relative;
-    display: inline-block; 
-    padding-bottom: 2px;
-}
-/* ::after 가상 요소를 사용하여 텍스트 밑에만 밑줄 추가 */
-.marketing_services_btm a::after {
-    content: '';
-    position: absolute; 
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px; 
-    background-color: black; 
-    opacity: 0;
-    transition: opacity; 
-}
-/* a 태그에 마우스 오버 시 밑줄 표시 */
-.marketing_services_btm a:hover::after {
-    opacity: 1;
-}
-/* 바이럴 서비스  HOVER */ 
-.viral_services_btm {
-    max-width: 100%;
-}
-.viral_services_btm a {
-    display: inline-block; 
-    max-width: 100%;
-    white-space: nowrap; 
+.advertising_agency_btm p,
+.advertising_product_btm p,
+.marketing_solutions_btm p{
+    word-break: keep-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis; 
-    text-decoration: none;
-    position: relative; 
-}
-.viral_services_btm a::after {
-    content: ''; 
-    display: block; 
-    width: 100%; 
-    height: 1px;
-    background-color: black;
-    position: absolute; 
-    bottom: 0; 
-    left: 0;
-    transform: scaleX(0);
-}
-.viral_services_btm a:hover::after {
-    transform: scaleX(1);
-}
-/* 제휴서비스 이미지 hover */
-/* 공통 스타일 설정 */
-.affiliate_service_1 img, 
-.affiliate_service_2 img, 
-.affiliate_service_3 img {
-    transition: transform 0.3s ease; 
-}
-/* 마우스를 올렸을 때 이미지 크기 조절 */
-.affiliate_service [class*="affiliate_common_selector"]:hover img{
-    transform: scale(1.1);
+    text-overflow: ellipsis;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 5px;
+    color: black ;
 }
 .advertising_agency_btm a:hover,
 .advertising_product_btm a:hover,
@@ -434,4 +190,137 @@ body {
 .marketing_solutions_btm a,
 .advertising_product_btm a {
     transition: border-color 0.3s ease;
+}
+/* 제휴서비스 */
+.affiliate_service_1 ,
+.affiliate_service_2 ,
+.affiliate_service_3 {
+    display: flex; 
+    margin-top: 10px ;
+    justify-content: space-between ;
+}
+.affiliate_service .affiliate_common_selector{
+    display: flex;
+    width: 360px;
+}
+.affiliate_service_btm img{
+    width: 68px;
+    height: 68px;
+    border-radius: 40px;
+}
+.affiliate_service_btm [class*="detail"]{
+    margin-left: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    height: 45px;
+    margin-top: 14px;
+    cursor: pointer;
+}
+.affiliate_service_btm span{
+    font-size: 14px;
+    color: #888 ;
+    font-weight: 500;
+}
+.affiliate_service_btm p {
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    margin: 0;
+}
+.affiliate_service_1 img, 
+.affiliate_service_2 img, 
+.affiliate_service_3 img {
+    transition: transform 0.3s ease; 
+}
+/* 마우스를 올렸을 때 이미지 크기 조절 */
+.affiliate_service [class*="affiliate_common_selector"]:hover img{
+    transform: scale(1.1);
+}
+/* 더보기 */
+.large_consulting .see_more:hover{
+    background-color: #e7e7e7;
+}
+.large_consulting .see_more{
+    width: 83px;
+    height: 29px;
+    border-radius: 5px;
+    background-color: #F3F2F6;
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+}
+/* 마케팅 서비스 */
+.viral_services_btm,
+.marketing_services_btm{
+    margin-top: 15px;
+}
+/* 마케팅,바이럴 마지막 줄 마진삭제 */
+.marketing_services_btm a:nth-last-child(1),
+.viral_services_btm a:nth-last-child(1) {
+    margin: 0;
+}
+.marketing_services_btm a {
+    font-size: 15px;
+    display: block;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    margin-bottom: 15px;
+}
+.marketing_solutions_btm span {
+    font-size: 14px;
+    color: #888;
+}
+/* 바이럴 서비스 */
+.viral_services_btm a {
+    font-size: 15px;
+    display: block;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    margin-bottom: 15px;
+}
+/* 마케팅, 바이럴 공통 선택자 */
+.marketing_viral {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.marketing_services,
+.viral_services{
+    width: calc(50% - 54px);
+    background-color: white;
+    border-radius: 8px;
+}
+/* 쪼잔뱅기들 */
+.advertising_pd{ 
+    padding: 30px 45px 25px 25px;
+    display: flex;
+}
+.advertising_product_btm span,
+.advertising_agency_btm span {
+    font-size: 14px;
+    color: #888;
+}
+/* 대행의뢰,마케팅서비스, 바이럴 서비스 밑줄 */
+.agency_request_btm a:hover, 
+.marketing_services_btm a:hover, 
+.viral_services_btm a:hover {
+    text-decoration: underline;
+}
+.advertising_product_btm,
+.advertising_agency_btm,
+.marketing_solutions_btm{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.consulting_tap_line {
+display: flex;
+justify-content: space-between;
+gap: 15px;
 }

@@ -1,3 +1,4 @@
+<!-- 광고상품, 광고대행사, 마케팅 솔루션 tap은 consulting_tap -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -18,13 +19,343 @@
     <script src="./javascript/index.js" defer></script>
     <link rel="stylesheet" href="./css/index.css">
 </head>
+<style>
+    @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+body, h1, h2, h3, h4, h5, h6, th, td, input, select, textarea {
+    color:#454545;
+    font-family:Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    font-size:12px;
+    font-weight:normal;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    }
+body{
+    background-color: #f5f5f5;
+    }
+a {
+    text-decoration: none; 
+    color: inherit;
+    background-color: transparent; 
+}
+span, em {
+    font-style: normal;
+    font-weight: normal;
+    color: inherit;
+    background-color: transparent; 
+}
+body {
+    font-family: 'Pretendard Variable', sans-serif;
+}
+/* 타이틀 */
+.large_consulting_title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+}
+/* padding */
+.large_consulting_pd30{
+    padding: 30px;
+}
+.affiliate_service_btm{
+    margin-top: 20px;
+}
+/* 공통 선택자 */
+.affiliate_service_btm [class*="detail"],
+.advertising_product_btm [class*="detail"],
+.advertising_agency_btm [class*="detail"],
+.marketing_solutions_btm [class*="detail"]{
+    position: relative;
+}
+/* 제일 큰 레이아웃 */
+.large_consulting {
+    width: 820px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.large_consulting_mid_banner,
+.large_consulting_wrap{
+    border-radius: 8px;
+}
+
+.large_consulting > div:not(.marketing_viral):not(.large_consulting_mid_banner):not(.large_consulting_wrap) {
+    background-color: white;
+    border-radius: 8px;
+}
+/* 대형의뢰 */
+.agency_request_btm [class*="agency_request_btm"] {
+    display: flex;
+    justify-content: space-between;
+}
+.agency_request_btm{
+    margin-top: 10px;
+}
+.agency_request_btm a{
+    display: flex;
+    align-items: center;
+    height: 33px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.agency_request_btm span{
+    font-size: 16px;
+    font-variant-numeric: tabular-nums;
+    display: flex;
+    align-items: center;
+    height: 33px;
+    margin-right: 18px;
+    font-weight: 500;
+} 
+/* 마감된 대행의뢰 */
+.agency_request_btm5 a{
+    color:  #C8C8C8;
+}
+/* 중간배너 */
+.large_consulting_mid_banner img{
+    border-radius: 8px;
+}
+.large_consulting_mid_banner a img {
+    height: 125px;
+    width: 100%;
+}
+/* 스와이퍼 */
+.large_consulting_wrap{
+    width: 820px;
+}
+.swiper-slide img{
+    height: 245px;
+    background-size: cover;
+    width: 100%;
+    border-radius: 8px;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+.swiper-wrapper {
+    display: flex;
+}
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+/* 탭 공통 선택자 */
+.tab_common_selector{
+    border-radius: 20px;
+    width: calc(33%);
+    border: 1px solid #E4E4E4;
+}
+.adverising_product_tap a,
+.advertising_agency_tap a,
+.marketing_solutions_tap a{
+    margin-right: 15px;
+}
+.tab-content img{
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    margin-right: 20px;
+
+}
+.tab-content em{
+    color: #888;
+    font-size: 14px;
+}
+.advertising_product_top a,
+.advertising_agency_top a,
+.marketing_solutions_top a  {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block; 
+}
+.advertising_agency_top,
+.advertising_product_top,
+.marketing_solutions_top {
+    display: flex;
+    justify-content: space-between;
+}
+.consulting_tap_line {
+    display: flex;
+}
+.adverising_product_tap a:nth-child(2),
+.adverising_product_tap a:nth-child(3),
+.advertising_agency_tap a:nth-child(1),
+.advertising_agency_tap a:nth-child(3),
+.marketing_solutions_tap a:nth-child(1),
+.marketing_solutions_tap a:nth-child(2){
+    color: #888;
+}
+.advertising_agency_btm p,
+.advertising_product_btm p,
+.marketing_solutions_btm p{
+    word-break: keep-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 5px;
+    color: black ;
+}
+.advertising_agency_btm a:hover,
+.advertising_product_btm a:hover,
+.marketing_solutions_btm a:hover{
+    border-color: #9e9e9e; 
+}
+.advertising_agency_btm a,
+.marketing_solutions_btm a,
+.advertising_product_btm a {
+    transition: border-color 0.3s ease;
+}
+/* 제휴서비스 */
+.affiliate_service_1 ,
+.affiliate_service_2 ,
+.affiliate_service_3 {
+    display: flex; 
+    margin-top: 10px ;
+    justify-content: space-between ;
+}
+.affiliate_service .affiliate_common_selector{
+    display: flex;
+    width: 360px;
+}
+.affiliate_service_btm img{
+    width: 68px;
+    height: 68px;
+    border-radius: 40px;
+}
+.affiliate_service_btm [class*="detail"]{
+    margin-left: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    height: 45px;
+    margin-top: 14px;
+    cursor: pointer;
+}
+.affiliate_service_btm span{
+    font-size: 14px;
+    color: #888 ;
+    font-weight: 500;
+}
+.affiliate_service_btm p {
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    margin: 0;
+}
+.affiliate_service_1 img, 
+.affiliate_service_2 img, 
+.affiliate_service_3 img {
+    transition: transform 0.3s ease; 
+}
+/* 마우스를 올렸을 때 이미지 크기 조절 */
+.affiliate_service [class*="affiliate_common_selector"]:hover img{
+    transform: scale(1.1);
+}
+/* 더보기 */
+.large_consulting .see_more:hover{
+    background-color: #e7e7e7;
+}
+.large_consulting .see_more{
+    width: 83px;
+    height: 29px;
+    border-radius: 5px;
+    background-color: #F3F2F6;
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+}
+/* 마케팅 서비스 */
+.viral_services_btm,
+.marketing_services_btm{
+    margin-top: 15px;
+}
+/* 마케팅,바이럴 마지막 줄 마진삭제 */
+.marketing_services_btm a:nth-last-child(1),
+.viral_services_btm a:nth-last-child(1) {
+    margin: 0;
+}
+.marketing_services_btm a {
+    font-size: 15px;
+    display: block;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    margin-bottom: 15px;
+}
+.marketing_solutions_btm span {
+    font-size: 14px;
+    color: #888;
+}
+/* 바이럴 서비스 */
+.viral_services_btm a {
+    font-size: 15px;
+    display: block;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    margin-bottom: 15px;
+}
+/* 마케팅, 바이럴 공통 선택자 */
+.marketing_viral {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.marketing_services,
+.viral_services{
+    width: calc(50% - 54px);
+    background-color: white;
+    border-radius: 8px;
+}
+/* 쪼잔뱅기들 */
+.advertising_pd{ 
+    padding: 30px 45px 25px 25px;
+    display: flex;
+}
+.advertising_product_btm span,
+.advertising_agency_btm span {
+    font-size: 14px;
+    color: #888;
+}
+/* 대행의뢰,마케팅서비스, 바이럴 서비스 밑줄 */
+.agency_request_btm a:hover, 
+.marketing_services_btm a:hover, 
+.viral_services_btm a:hover {
+    text-decoration: underline;
+}
+.advertising_product_btm,
+.advertising_agency_btm,
+.marketing_solutions_btm{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.consulting_tap_line {
+display: flex;
+justify-content: space-between;
+gap: 15px;
+}
+</style>
 <body>
     <div class="large_consulting">
         <div class="large_consulting_wrap">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="https://cdn.ibos.kr/images/p1486336_top_new_bn_01.png" alt=""></div>
-                    <div class="swiper-slide"><img src="https://cdn.ibos.kr/design/upload_file/__HTMLEDITOR__/oxd7LPghfW/PQH219GVYB8SV4HTME0LW1CHZ2PTB688P2OD65TL_1723763039040772.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="https://th.bing.com/th/id/R.741fd6a6c5cbc652093dcec7f5d84ef0?rik=PMiohZft2tC2Fg&riu=http%3a%2f%2fwww.v3wall.com%2fwallpaper%2f1920_1080%2f1502%2f1920_1080_20150211115652783924.jpg&ehk=MBZS4uTfxO60K31dBTY1S44AVu22WfKHBIKVDWpMsMA%3d&risl=&pid=ImgRaw&r=0" alt=""></div>
+                    <div class="swiper-slide"><img src="https://th.bing.com/th/id/R.741fd6a6c5cbc652093dcec7f5d84ef0?rik=PMiohZft2tC2Fg&riu=http%3a%2f%2fwww.v3wall.com%2fwallpaper%2f1920_1080%2f1502%2f1920_1080_20150211115652783924.jpg&ehk=MBZS4uTfxO60K31dBTY1S44AVu22WfKHBIKVDWpMsMA%3d&risl=&pid=ImgRaw&r=0" alt=""></div>
                     <div class="swiper-slide"><img src="https://cdn.ibos.kr/images/p1486336_top_new_bn_01.png" alt=""></div>
                     <div class="swiper-slide"><img src="https://cdn.ibos.kr/images/p1486336_top_new_bn_01.png" alt=""></div>
                     <div class="swiper-slide"><img src="https://cdn.ibos.kr/images/p1486336_top_new_bn_01.png" alt=""></div>
@@ -35,316 +366,287 @@
                     <div class="swiper-slide"><img src="https://cdn.ibos.kr/images/p1486336_top_new_bn_01.png" alt=""></div>
                 </div>
             </div>
-        </div>
+        </div> 
         <!-- 대행의뢰 -->
-        <div class="agency_request">
-            <div class="agency_request_padding30">
-                <div class="agency_request_top">
-                    <strong>대행의뢰</strong>
-                    <a href="#" class="see_more">더보기</a>
+        <div class="agency_request large_consulting_pd30">
+            <div class="large_consulting_title">
+                <strong>대행의뢰</strong>
+                <a href="#" class="see_more">더보기</a>
+            </div>
+            <div class="agency_request_btm">
+                <div class="agency_request_btm1">
+                    <a href="#">네이버 브로그 탭 노출 의뢰드립니다.</a>
+                    <span>D-1</span>
                 </div>
-                <div class="agency_request_btm">
-                    <div class="agency_request_btm1">
-                        <a href="#">네이버 브로그 탭 노출 의뢰드립니다.</a>
-                        <span>D-1</span>
-                    </div>
-                    <div class="agency_request_btm2">
-                        <a href="#">케이블tv PPL 40~60대 시청률 높은 프로그램 견적요청</a>
-                        <span>D-3</span>
-                    </div>
-                    <div class="agency_request_btm3">
-                        <a href="#">네이버 파워링크, 구글SA 운영 파트너사를 찾고 있습니다.</a>
-                        <span>D-6</span>
-                    </div>
-                    <div class="agency_request_btm4">
-                        <a href="#">언론 송출 광고 실행/대행사 찾고있습니다.(프리랜서가능)</a>
-                        <span>D-8</span>
-                    </div>
-                    <div class="agency_request_btm5">
-                        <a href="#">[마감]견적 문의 건</a>
-                        <span></span>
-                    </div>
-                    <div class="agency_request_btm6">
-                        <a href="#">싱가포르 여성화 브랜드 백화점 팝업스토어 대행 문의</a>
-                        <span>D-7</span>
-                    </div>
-                    <div class="agency_request_btm7">
-                        <a href="#">더쿠 커뮤니티 바이럴 의뢰합니다.</a>
-                        <span>D-4</span>
-                    </div>
-                    <div class="agency_request_btm8">
-                        <a href="#">플레이스 푸불제 실행사 구합니다.</a>
-                        <span>D-2</span>
-                    </div>
+                <div class="agency_request_btm2">
+                    <a href="#">케이블tv PPL 40~60대 시청률 높은 프로그램 견적요청</a>
+                    <span>D-3</span>
+                </div>
+                <div class="agency_request_btm3">
+                    <a href="#">네이버 파워링크, 구글SA 운영 파트너사를 찾고 있습니다.</a>
+                    <span>D-6</span>
+                </div>
+                <div class="agency_request_btm4">
+                    <a href="#">언론 송출 광고 실행/대행사 찾고있습니다.(프리랜서가능)</a>
+                    <span>D-8</span>
+                </div>
+                <div class="agency_request_btm5">
+                    <a href="#">[마감]견적 문의 건</a>
+                    <span></span>
+                </div>
+                <div class="agency_request_btm6">
+                    <a href="#">싱가포르 여성화 브랜드 백화점 팝업스토어 대행 문의</a>
+                    <span>D-7</span>
+                </div>
+                <div class="agency_request_btm7">
+                    <a href="#">더쿠 커뮤니티 바이럴 의뢰합니다.</a>
+                    <span>D-4</span>
+                </div>
+                <div class="agency_request_btm8">
+                    <a href="#">플레이스 푸불제 실행사 구합니다.</a>
+                    <span>D-2</span>
                 </div>
             </div>
         </div>
         <!-- 중간배너 -->
         <div class="large_consulting_mid_banner">
-            <a href="#"><img src="https://cdn.ibos.kr/images/p1486336_top_new_bn_01.png" alt=""></a>
+            <a href="#"><img src="https://th.bing.com/th/id/R.741fd6a6c5cbc652093dcec7f5d84ef0?rik=PMiohZft2tC2Fg&riu=http%3a%2f%2fwww.v3wall.com%2fwallpaper%2f1920_1080%2f1502%2f1920_1080_20150211115652783924.jpg&ehk=MBZS4uTfxO60K31dBTY1S44AVu22WfKHBIKVDWpMsMA%3d&risl=&pid=ImgRaw&r=0" alt=""></a>
         </div>
         <!-- 마케팅 서비스, 바이럴 서비스 -->
         <div class="marketing_viral">
             <!-- 마케팅 서비스 -->
-            <div class="marketing_services">
-                <div class="marketing_services_padding30">
-                    <div class="marketing_services_top">
-                        <strong>마케팅 서비스</strong>
-                        <a href="#" class="see_more">더보기</a>
-                    </div>
-                    <div class="marketing_services_btm">
-                        <a href="#">340억 적자를 극복한 '무인양품'의 비밀은...?!</a>
-                        <a href="#">최대 규모 대출 광고 업체입니다.</a>
-                        <a href="#">틈새 속에서 발견하는 나의 무기 (리브랜딩)</a>
-                        <a href="#">할인 이벤트 하신다면, 할인애착에서 무료로 홍보하세요!</a>
-                        <a href="#">우리 스토어 상품이 잘 팔리지 않는 이유는?</a>
-                        <a href="#">웹실디자인 상세페이지, 랜딩페이지 전문 제작</a>
-                    </div>
+            <div class="marketing_services large_consulting_pd30">
+                <div class="large_consulting_title">
+                    <strong>마케팅 서비스</strong>
+                    <a href="#" class="see_more">더보기</a>
+                </div>
+                <div class="marketing_services_btm">
+                    <a href="#">340억 적자를 극복한 '무인양품'의 비밀은...?!</a>
+                    <a href="#">최대 규모 대출 광고 업체입니다.</a>
+                    <a href="#">틈새 속에서 발견하는 나의 무기 (리브랜딩)</a>
+                    <a href="#">할인 이벤트 하신다면, 할인애착에서 무료로 홍보하세요!</a>
+                    <a href="#">우리 스토어 상품이 잘 팔리지 않는 이유는?</a>
+                    <a href="#">웹실디자인 상세페이지, 랜딩페이지 전문 제작</a>
                 </div>
             </div>
             <!-- 바이럴 서비스 -->
-            <div class="viral_services">
-                <div class="viral_services_padding30">
-                    <div class="viral_services_top">
-                        <strong>바이럴 서비스</strong>
-                        <a href="#" class="see_more">더보기</a>
-                    </div>
-                    <div class="viral_services_btm">
-                        <a href="#">VIEW 에어서치 잘하는 곳 찾으신다면?</a>
-                        <a href="#">네이버 노출의 모든것 [스마트블록/카페/인플루언서/머시기머시기]</a>
-                        <a href="#">맘카페 바이럴/핫딜 최다 리스트 보유 업계 최저가 2만 머시기머시기</a>
-                        <a href="#">[스마트블록 VIEW 블로그 진짜 실행사는 견적부터 다 머시기머시기]</a>
-                        <a href="#">블로그 건바이/월관리/배초 노출 전문 최저가 실행사</a>
-                        <a href="#">사기 걱정없는 마케팅/디자인 통합실행사 유앤준을 소개합니다.</a>
-                    </div>
+            <div class="viral_services large_consulting_pd30">
+                <div class="large_consulting_title">
+                    <strong>바이럴 서비스</strong>
+                    <a href="#" class="see_more">더보기</a>
+                </div>
+                <div class="viral_services_btm">
+                    <a href="#">VIEW 에어서치 잘하는 곳 찾으신다면?</a>
+                    <a href="#">네이버 노출의 모든것 [스마트블록/카페/인플루언서/머시기머시기]</a>
+                    <a href="#">맘카페 바이럴/핫딜 최다 리스트 보유 업계 최저가 2만 머시기머시기</a>
+                    <a href="#">[스마트블록 VIEW 블로그 진짜 실행사는 견적부터 다 머시기머시기]</a>
+                    <a href="#">블로그 건바이/월관리/배초 노출 전문 최저가 실행사</a>
+                    <a href="#">사기 걱정없는 마케팅/디자인 통합실행사 유앤준을 소개합니다.</a>
                 </div>
             </div>
         </div>
         <!-- 제휴서비스 -->
-        <div class="affiliate_service">
-            <div class="affiliate_service_padding30">
-                <div class="affiliate_service_top">
-                    <strong>제휴 서비스</strong>
-                    <a href="#" class="see_more">더보기</a>
+        <div class="affiliate_service large_consulting_pd30">
+            <div class="large_consulting_title">
+                <strong>제휴 서비스</strong>
+                <a href="#" class="see_more">더보기</a>
+            </div>
+            <div class="affiliate_service_btm">
+                <!-- 첫번째줄 -->
+                <div class="affiliate_service_1">
+                    <!-- 첫번째줄 왼쪽 -->
+                    <a class=" affiliate_common_selector">
+                        <div>
+                            <img src="https://cdn.ibos.kr/images/main_article3_icon_videostew.png" alt="">
+                        </div>
+                        <div class="tap_consulting_detail">
+                            <span>고객의 마음을 사로잡는 SNS 광고 맛집</span>
+                            <p>SNS 광고 대행 문의하기</p>
+                        </div>
+                    </a>
+                    <!-- 첫번째줄 오른쪽 -->
+                    <a class=" affiliate_common_selector">
+                        <div>
+                            <img src="https://cdn.ibos.kr/images/main_article3_icon_ambition_plan_seo.png" alt="">
+                        </div>
+                        <div class="tap_consulting_detail">
+                            <span>보스님 행사에 맞는 방송 진행자</span>
+                            <p>아나운서 섭외 문의하기</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="affiliate_service_btm">
-                    <!-- 첫번째줄 -->
-                    <div class="affiliate_service_1">
-                        <!-- 첫번째줄 왼쪽 -->
-                        <a class="affiliate_service_1_1 affiliate_common_selector">
-                            <div class="affiliate_service_1_1_img">
-                                <img src="https://cdn.ibos.kr/images/main_article3_icon_videostew.png" alt="">
-                            </div>
-                            <div class="affiliate_service_1_1_detail">
-                                <span>고객의 마음을 사로잡는 SNS 광고 맛집</span>
-                                <p>SNS 광고 대행 문의하기</p>
-                            </div>
-                        </a>
-                        <!-- 첫번째줄 오른쪽 -->
-                        <a class="affiliate_service_1_2 affiliate_common_selector">
-                            <div class="affiliate_service_1_2_img">
-                                <img src="https://cdn.ibos.kr/images/main_article3_icon_ambition_plan_seo.png" alt="">
-                            </div>
-                            <div class="affiliate_service_1_2_detail">
-                                <span>보스님 행사에 맞는 방송 진행자</span>
-                                <p>아나운서 섭외 문의하기</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- 두번째줄 -->
-                    <div class="affiliate_service_2">
-                        <!-- 두번째줄 왼쪽 -->
-                        <a class="affiliate_service_2_1 affiliate_common_selector">
-                            <div class="affiliate_service_2_1_img">
-                                <img src="https://cdn.ibos.kr/images/main_article3_icon_admoment.png" alt="">
-                            </div>
-                            <div class="affiliate_service_2_1_detail">
-                                <span>최적화된 구글 애즈 성과를 만들어드립니다</span>
-                                <p>구글/유튜브 광고 대행 문의하기</p>
-                            </div>
-                        </a>
-                        <!-- 두번째줄 오른쪽 -->
-                        <a class="affiliate_service_2_2 affiliate_common_selector">
-                            <div class="affiliate_service_2_2_img">
-                                <img src="https://cdn.ibos.kr/images/main_article3_icon_8226.png" alt="">
-                            </div>
-                            <div class="affiliate_service_2_2_detail">
-                                <span>프렌차이즈 브랜딩부터 광고까지 알잘딱깔센으로</span>
-                                <p>프렌차이즈 특화 광고 문의하기</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- 세번째줄 -->
-                    <div class="affiliate_service_3">
-                        <!-- 세번째줄 왼쪽 -->
-                        <a class="affiliate_service_3_1 affiliate_common_selector">
-                            <div class="affiliate_service_3_1_img">
-                                <img src="https://cdn.ibos.kr/images/main_article3_icon_6911.png" alt="">
-                            </div>
-                            <div class="affiliate_service_3_1_detail">
-                                <span>사내 디자이너가 없거나, 일손이 부족하다면?</span>
-                                <p>디자인 구독 서비스를 이용해 보세요</p>
-                            </div>
-                        </a>
-                        <!-- 세번째줄 오른쪽 -->
-                        <a class="affiliate_service_3_2 affiliate_common_selector">
-                            <div class="affiliate_service_3_2_img">
-                                <img src="https://cdn.ibos.kr/images/main_article3_icon_junglemaker.png" alt="">
-                            </div>
-                            <div class="affiliate_service_3_2_detail">
-                                <span>광고비 쓰고 포인트 받는 롯데 법인카드</span>
-                                <p>광고 전용 카드 신청하기</p>
-                            </div>
-                        </a>
-                    </div>
+                <!-- 두번째줄 -->
+                <div class="affiliate_service_2">
+                    <!-- 두번째줄 왼쪽 -->
+                    <a class=" affiliate_common_selector">
+                        <div>
+                            <img src="https://cdn.ibos.kr/images/main_article3_icon_admoment.png" alt="">
+                        </div>
+                        <div class="tap_consulting_detail">
+                            <span>최적화된 구글 애즈 성과를 만들어드립니다</span>
+                            <p>구글/유튜브 광고 대행 문의하기</p>
+                        </div>
+                    </a>
+                    <!-- 두번째줄 오른쪽 -->
+                    <a class=" affiliate_common_selector">
+                        <div>
+                            <img src="https://cdn.ibos.kr/images/main_article3_icon_8226.png" alt="">
+                        </div>
+                        <div class="tap_consulting_detail">
+                            <span>프렌차이즈 브랜딩부터 광고까지 알잘딱깔센으로</span>
+                            <p>프렌차이즈 특화 광고 문의하기</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- 세번째줄 -->
+                <div class="affiliate_service_3">
+                    <!-- 세번째줄 왼쪽 -->
+                    <a class=" affiliate_common_selector">
+                        <div>
+                            <img src="https://cdn.ibos.kr/images/main_article3_icon_6911.png" alt="">
+                        </div>
+                        <div class="tap_consulting_detail">
+                            <span>사내 디자이너가 없거나, 일손이 부족하다면?</span>
+                            <p>디자인 구독 서비스를 이용해 보세요</p>
+                        </div>
+                    </a>
+                    <!-- 세번째줄 오른쪽 -->
+                    <a class=" affiliate_common_selector">
+                        <div>
+                            <img src="https://cdn.ibos.kr/images/main_article3_icon_junglemaker.png" alt="">
+                        </div>
+                        <div class="tap_consulting_detail">
+                            <span>광고비 쓰고 포인트 받는 롯데 법인카드</span>
+                            <p>광고 전용 카드 신청하기</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
         <!-- 광고상품, 광고 대행사, 마케팅 솔루션 탭 -->
         <!-- 광고 상품 -->
-        <div class="tab-content advertising_product" style="display: block;">
-            <div class="advertising_product_padding30">
-                <div class="advertising_product_top">
-                    <div class="adverising_product_tap">
-                        <a href="#" class="tab-link" data-target="advertising_product">광고 상품</a>
-                        <a href="#" class="tab-link" data-target="advertising_agency">광고 대행사</a>
-                        <a href="#" class="tab-link" data-target="marketing_solutions">마케팅 솔루션</a>
-                    </div>
-                    <a href="#" class="see_more">더보기</a>
+        <div class="tab-content advertising_product large_consulting_pd30">
+            <div class="advertising_product_top">
+                <div class="adverising_product_tap">
+                    <a href="#" class="tab-link" data-target="advertising_product">광고 상품</a>
+                    <a href="#" class="tab-link" data-target="advertising_agency">광고 대행사</a>
+                    <a href="#" class="tab-link" data-target="marketing_solutions">마케팅 솔루션</a>
                 </div>
-                <div class="advertising_product_btm">
-                    <!-- 첫번째 줄 -->
-                    <div class="advertising_product_1">
-                        <!-- 첫번째줄-1 -->
-                        <a href="#" class="advertising_product_1_1 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="advertising_product_1_1_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/105333465ef0efdd8f8e343b685d703a_44442_1.png" alt="">
-                                </div>
-                                <div class="advertising_product_1_1_detail">
-                                    <span>러너블</span>
-                                    <p>대회 스폰서십 & 버추얼 러닝 이벤트</p>
-                                    <em>#콘텐츠광고</em>
-                                </div>
+                <a href="#" class="see_more">더보기</a>
+            </div>
+            <div class="advertising_product_btm">
+                <!-- 첫번째 줄 -->
+                <div class="consulting_tap_line">
+                    <!-- 첫번째줄-1 -->
+                    <a href="#" class="tab_common_selector">
+                        <div class="advertising_pd">
+                            <img src="https://cdn.ibos.kr/design/upload_file/BD2794/105333465ef0efdd8f8e343b685d703a_44442_1.png" alt="">
+                            <div class="tap_consulting_detail">
+                                <span>러너블</span>
+                                <p>대회 스폰서십 & 버추얼 러닝 이벤트</p>
+                                <em>#콘텐츠광고</em>
                             </div>
-                        </a>
-                        <!-- 첫번째줄-2 -->
-                        <a href="#" class="advertising_product_1_2 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="advertising_product_1_2_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/7970de0ae32ed6be467b5289f68adcea_33294_1.jpg" alt="">
-                                </div>
-                                <div class="advertising_product_1_2_detail">
-                                    <span>강남언니</span>
-                                    <p>강남언니 앱내 광고</p>
-                                    <em>#검색광고</em>
-                                </div>
+                        </div>
+                    </a>
+                    <!-- 첫번째줄-2 -->
+                    <a href="#" class="tab_common_selector">
+                        <div class="advertising_pd">
+                            <img src="https://cdn.ibos.kr/design/upload_file/BD2794/7970de0ae32ed6be467b5289f68adcea_33294_1.jpg" alt="">
+                            <div class="tap_consulting_detail">
+                                <span>강남언니</span>
+                                <p>강남언니 앱내 광고</p>
+                                <em>#검색광고</em>
                             </div>
-                        </a>
-                        <!-- 첫번째줄-3 -->
-                        <a href="#" class="advertising_product_1_3 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="advertising_product_1_3_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/7ec954479200fcdac678b17a64d0b4fa_70115_1.png" alt="">
-                                </div>
-                                <div class="advertising_product_1_3_detail">
-                                    <span>맘마플래너</span>
-                                    <p>맘마플래너 CPP 구좌 광고</p>
-                                    <em>#배너광고</em>
-                                </div>
+                        </div>
+                    </a>
+                    <!-- 첫번째줄-3 -->
+                    <a href="#" class="tab_common_selector">
+                        <div class="advertising_pd">
+                            <img src="https://cdn.ibos.kr/design/upload_file/BD2794/7ec954479200fcdac678b17a64d0b4fa_70115_1.png" alt="">
+                            <div class="tap_consulting_detail">
+                                <span>맘마플래너</span>
+                                <p>맘마플래너 CPP 구좌 광고</p>
+                                <em>#배너광고</em>
                             </div>
-                        </a>
-                    </div>
-                    <!-- 두번째 줄 -->
-                    <div class="advertising_product_2">
-                        <!-- 두번째줄-1 -->
-                        <a href="#" class="advertising_product_2_1 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="advertising_product_2_1_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/c28ba519ca6a2bb1968c6616a4357dce_32698_1.png" alt="">
-                                </div>
-                                <div class="advertising_product_2_1_detail">
-                                    <span>파비</span>
-                                    <p>파비리서치 - AI 번역기 + 머시기머시기</p>
-                                    <em>#배너광고</em>
-                                </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- 두번째 줄 -->
+                <div class="consulting_tap_line">
+                    <!-- 두번째줄-1 -->
+                    <a href="#" class=" tab_common_selector">
+                        <div class="advertising_pd">
+                            <img src="https://cdn.ibos.kr/design/upload_file/BD2794/c28ba519ca6a2bb1968c6616a4357dce_32698_1.png" alt="">
+                            <div class="tap_consulting_detail">
+                                <span>파비</span>
+                                <p>파비리서치 - AI 번역기 + 머시기머시기</p>
+                                <em>#배너광고</em>
                             </div>
-                        </a>
-                        <!-- 두번째줄-2 -->
-                        <a href="#" class="advertising_product_2_2 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="advertising_product_2_2_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/6c17cd68e605529c758c0a445a8904d8_5867_1.png" alt="">
-                                </div>
-                                <div class="advertising_product_2_2_detail">
-                                    <span>모두닥</span>
-                                    <p>모두닥 맞춤형 게시 광고</p>
-                                    <em>#검색광고</em>
-                                </div>
+                        </div>
+                    </a>
+                    <!-- 두번째줄-2 -->
+                    <a href="#" class=" tab_common_selector">
+                        <div class="advertising_pd">
+                            <img src="https://cdn.ibos.kr/design/upload_file/BD2794/6c17cd68e605529c758c0a445a8904d8_5867_1.png" alt="">
+                            <div class="tap_consulting_detail">
+                                <span>모두닥</span>
+                                <p>모두닥 맞춤형 게시 광고</p>
+                                <em>#검색광고</em>
                             </div>
-                        </a>
-                        <!-- 두번째줄-3 -->
-                        <a href="#" class="advertising_product_2_3 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="advertising_product_2_3_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/bc4a4a0e287ecfd1b337310f2d85a968_72738_1.jpg" alt="">
-                                </div>
-                                <div class="advertising_product_2_3_detail">
-                                    <span>동아사이언스</span>
-                                    <p>과학동아 광고</p>
-                                    <em>#콘텐츠광고</em>
-                                </div>
+                        </div>
+                    </a>
+                    <!-- 두번째줄-3 -->
+                    <a href="#" class=" tab_common_selector">
+                        <div class="advertising_pd">
+                            <img src="https://cdn.ibos.kr/design/upload_file/BD2794/bc4a4a0e287ecfd1b337310f2d85a968_72738_1.jpg" alt="">
+                            <div class="tap_consulting_detail">
+                                <span>동아사이언스</span>
+                                <p>과학동아 광고</p>
+                                <em>#콘텐츠광고</em>
                             </div>
-                        </a>
-                    </div>
-                    <!-- 세번째 줄 -->
-                    <div class="advertising_product_3">
-                        <!-- 세번째줄-1 -->
-                        <a href="#" class="advertising_product_3_1 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="advertising_product_3_1_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/103355176db51758e4ebcd36b2384ffd_87024_1.jpg" alt="">
-                                </div>
-                                <div class="advertising_product_3_1_detail">
-                                    <span>스타일쉐어</span>
-                                    <p>스타일쉐어 광고상품 소개서</p>
-                                    <em>#배너광고</em>
-                                </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- 세번째 줄 -->
+                <div class="consulting_tap_line">
+                    <!-- 세번째줄-1 -->
+                    <a href="#" class=" tab_common_selector">
+                        <div class="advertising_pd">
+                            <img src="https://cdn.ibos.kr/design/upload_file/BD2794/103355176db51758e4ebcd36b2384ffd_87024_1.jpg" alt="">
+                            <div class="tap_consulting_detail">
+                                <span>스타일쉐어</span>
+                                <p>스타일쉐어 광고상품 소개서</p>
+                                <em>#배너광고</em>
                             </div>
-                        </a>
-                        <!-- 세번째줄-2 -->
-                        <a href="#" class="advertising_product_3_2 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="advertising_product_3_2_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/4356429cac1fd199c3e8429d3d5638fb_48753_1.png" alt="">
-                                </div>
-                                <div class="advertising_product_3_2_detail">
-                                    <span>놀이의발견</span>
-                                    <p>놀이의발견 광고 상품</p>
-                                    <em>#배너광고</em>
-                                </div>
+                        </div>
+                    </a>
+                    <!-- 세번째줄-2 -->
+                    <a href="#" class=" tab_common_selector">
+                        <div class="advertising_pd">
+                            <img src="https://cdn.ibos.kr/design/upload_file/BD2794/4356429cac1fd199c3e8429d3d5638fb_48753_1.png" alt="">
+                            <div class="tap_consulting_detail">
+                                <span>놀이의발견</span>
+                                <p>놀이의발견 광고 상품</p>
+                                <em>#배너광고</em>
                             </div>
-                        </a>
-                        <!-- 세번째줄-3 -->
-                        <a href="#" class="advertising_product_3_3 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="advertising_product_3_3_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/b9310f442345449f821c52fe9cd4615f_61608_1.png" alt="">
-                                </div>
-                                <div class="advertising_product_3_3_detail">
-                                    <span>중고나라</span>
-                                    <p>중고나라 광고 상품</p>
-                                    <em>#배너광고</em>
-                                </div>
+                        </div>
+                    </a>
+                    <!-- 세번째줄-3 -->
+                    <a href="#" class=" tab_common_selector">
+                        <div class="advertising_pd">
+                            <img src="https://cdn.ibos.kr/design/upload_file/BD2794/b9310f442345449f821c52fe9cd4615f_61608_1.png" alt="">
+                            <div class="tap_consulting_detail">
+                                <span>중고나라</span>
+                                <p>중고나라 광고 상품</p>
+                                <em>#배너광고</em>
                             </div>
-                        </a>
-                    </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
         <!-- 광고 대행사 -->
-        <div class="tab-content advertising_agency" style="display: none;">
-            <div class="advertising_agency_padding30">
+        <div class="tab-content advertising_agency large_consulting_pd30">
                 <div class="advertising_agency_top">
                     <div class="advertising_agency_tap">
                         <a href="#" class="tab-link" data-target="advertising_product">광고 상품</a>
@@ -355,14 +657,12 @@
                 </div>
                 <div class="advertising_agency_btm">
                     <!-- 첫번째 줄 -->
-                    <div class="advertising_agency_1">
+                    <div class="consulting_tap_line">
                         <!-- 첫번째줄-1 -->
-                        <a href="#" class="advertising_agency_1_1 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="advertising_agency_1_1_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/105333465ef0efdd8f8e343b685d703a_44442_1.png" alt="">
-                                </div>
-                                <div class="advertising_agency_1_1_detail">
+                        <a href="#" class=" tab_common_selector">
+                            <div class="advertising_pd">
+                                <img src="https://cdn.ibos.kr/design/upload_file/BD2794/105333465ef0efdd8f8e343b685d703a_44442_1.png" alt="">
+                                <div class="tap_consulting_detail">
                                     <span>러너블</span>
                                     <p>대회 스폰서십 & 버추얼 러닝 이벤트</p>
                                     <em>#콘텐츠광고</em>
@@ -370,12 +670,10 @@
                             </div>
                         </a>
                         <!-- 첫번째줄-2 -->
-                        <a href="#" class="advertising_agency_1_2 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="advertising_agency_1_2_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/7970de0ae32ed6be467b5289f68adcea_33294_1.jpg" alt="">
-                                </div>
-                                <div class="advertising_agency_1_2_detail">
+                        <a href="#" class=" tab_common_selector">
+                            <div class="advertising_pd">
+                                <img src="https://cdn.ibos.kr/design/upload_file/BD2794/7970de0ae32ed6be467b5289f68adcea_33294_1.jpg" alt="">
+                                <div class="tap_consulting_detail">
                                     <span>강남언니</span>
                                     <p>강남언니 앱내 광고</p>
                                     <em>#검색광고</em>
@@ -383,55 +681,47 @@
                             </div>
                         </a>
                         <!-- 첫번째줄-3 -->
-                        <a href="#" class="advertising_agency_1_3 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="advertising_agency_1_3_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/7ec954479200fcdac678b17a64d0b4fa_70115_1.png" alt="">
-                                </div>
-                                <div class="advertising_agency_1_3_detail">
+                        <a href="#" class=" tab_common_selector">
+                            <div class="advertising_pd">
+                                <img src="https://cdn.ibos.kr/design/upload_file/BD2794/7ec954479200fcdac678b17a64d0b4fa_70115_1.png" alt="">
+                                <div class="tap_consulting_detail">
                                     <span>맘마플래너</span>
-                                    <p>맘마플래너 CPP 구좌 광고</p>
+                                    <p>파비리서치 - AI 번역기 + 머시기머시기</p>
                                     <em>#배너광고</em>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <!-- 두번째 줄 -->
-                    <div class="advertising_agency_2">
+                    <div class="consulting_tap_line">
                         <!-- 두번째줄-1 -->
-                        <a href="#" class="advertising_agency_2_1 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="advertising_agency_2_1_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/c28ba519ca6a2bb1968c6616a4357dce_32698_1.png" alt="">
-                                </div>
-                                <div class="advertising_agency_2_1_detail">
-                                    <span>파비</span>
-                                    <p>파비리서치 - AI 번역기 + 머시기머시기</p>
+                        <a href="#" class=" tab_common_selector">
+                            <div class="advertising_pd">
+                                <img src="https://cdn.ibos.kr/design/upload_file/BD2794/c28ba519ca6a2bb1968c6616a4357dce_32698_1.png" alt="">
+                                <div class="tap_consulting_detail">
+                                    <span>중고나라</span>
+                                    <p>맘마플래너 CPP 구좌 광고</p>
                                     <em>#배너광고</em>
                                 </div>
                             </div>
                         </a>
                         <!-- 두번째줄-2 -->
-                        <a href="#" class="advertising_agency_2_2 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="advertising_agency_2_2_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/6c17cd68e605529c758c0a445a8904d8_5867_1.png" alt="">
-                                </div>
-                                <div class="advertising_agency_2_2_detail">
-                                    <span>모두닥</span>
+                        <a href="#" class=" tab_common_selector">
+                            <div class="advertising_pd">
+                                <img src="https://cdn.ibos.kr/design/upload_file/BD2794/6c17cd68e605529c758c0a445a8904d8_5867_1.png" alt="">
+                                <div class="tap_consulting_detail">
+                                    <span>당근</span>
                                     <p>모두닥 맞춤형 게시 광고</p>
                                     <em>#검색광고</em>
                                 </div>
                             </div>
                         </a>
                         <!-- 두번째줄-3 -->
-                        <a href="#" class="advertising_agency_2_3 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="advertising_agency_2_3_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/bc4a4a0e287ecfd1b337310f2d85a968_72738_1.jpg" alt="">
-                                </div>
-                                <div class="advertising_agency_2_3_detail">
-                                    <span>동아사이언스</span>
+                        <a href="#" class=" tab_common_selector">
+                            <div class="advertising_pd">
+                                <img src="https://cdn.ibos.kr/design/upload_file/BD2794/bc4a4a0e287ecfd1b337310f2d85a968_72738_1.jpg" alt="">
+                                <div class="tap_consulting_detail">
+                                    <span>아이보스</span>
                                     <p>과학동아 광고</p>
                                     <em>#콘텐츠광고</em>
                                 </div>
@@ -439,14 +729,12 @@
                         </a>
                     </div>
                     <!-- 세번째 줄 -->
-                    <div class="advertising_agency_3">
+                    <div class="consulting_tap_line">
                         <!-- 세번째줄-1 -->
-                        <a href="#" class="advertising_agency_3_1 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="advertising_agency_3_1_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/103355176db51758e4ebcd36b2384ffd_87024_1.jpg" alt="">
-                                </div>
-                                <div class="advertising_agency_3_1_detail">
+                        <a href="#" class=" tab_common_selector">
+                            <div class="advertising_pd">
+                                <img src="https://cdn.ibos.kr/design/upload_file/BD2794/103355176db51758e4ebcd36b2384ffd_87024_1.jpg" alt="">
+                                <div class="tap_consulting_detail">
                                     <span>스타일쉐어</span>
                                     <p>스타일쉐어 광고상품 소개서</p>
                                     <em>#배너광고</em>
@@ -454,12 +742,10 @@
                             </div>
                         </a>
                         <!-- 세번째줄-2 -->
-                        <a href="#" class="advertising_agency_3_2 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="advertising_agency_3_2_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/4356429cac1fd199c3e8429d3d5638fb_48753_1.png" alt="">
-                                </div>
-                                <div class="advertising_agency_3_2_detail">
+                        <a href="#" class=" tab_common_selector">
+                            <div class="advertising_pd">
+                                <img src="https://cdn.ibos.kr/design/upload_file/BD2794/4356429cac1fd199c3e8429d3d5638fb_48753_1.png" alt="">
+                                <div class="tap_consulting_detail">
                                     <span>놀이의발견</span>
                                     <p>놀이의발견 광고 상품</p>
                                     <em>#배너광고</em>
@@ -467,12 +753,10 @@
                             </div>
                         </a>
                         <!-- 세번째줄-3 -->
-                        <a href="#" class="advertising_agency_3_3 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="advertising_agency_3_3_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/b9310f442345449f821c52fe9cd4615f_61608_1.png" alt="">
-                                </div>
-                                <div class="advertising_agency_3_3_detail">
+                        <a href="#" class=" tab_common_selector">
+                            <div class="advertising_pd">
+                                <img src="https://cdn.ibos.kr/design/upload_file/BD2794/b9310f442345449f821c52fe9cd4615f_61608_1.png" alt="">
+                                <div class="tap_consulting_detail">
                                     <span>중고나라</span>
                                     <p>중고나라 광고 상품</p>
                                     <em>#배너광고</em>
@@ -481,10 +765,9 @@
                         </a>
                     </div>
                 </div>
-            </div>
         </div>
         <!-- 마케팅 솔루션 -->
-        <div class="tab-content marketing_solutions" style="display: none;">
+        <div class="tab-content marketing_solutions large_consulting_pd30">
             <div class="marketing_solutions_padding30">
                 <div class="marketing_solutions_top">
                     <div class="marketing_solutions_tap">
@@ -496,14 +779,12 @@
                 </div>
                 <div class="marketing_solutions_btm">
                     <!-- 첫번째 줄 -->
-                    <div class="marketing_solutions_1">
+                    <div class="consulting_tap_line">
                         <!-- 첫번째줄-1 -->
-                        <a href="#" class="marketing_solutions_1_1 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="marketing_solutions_1_1_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/105333465ef0efdd8f8e343b685d703a_44442_1.png" alt="">
-                                </div>
-                                <div class="marketing_solutions_1_1_detail">
+                        <a href="#" class=" tab_common_selector">
+                            <div class="advertising_pd">
+                                <img src="https://cdn.ibos.kr/design/upload_file/BD2794/105333465ef0efdd8f8e343b685d703a_44442_1.png" alt="">
+                                <div class="tap_consulting_detail">
                                     <span>러너블</span>
                                     <p>대회 스폰서십 & 버추얼 러닝 이벤트</p>
                                     <em>#콘텐츠광고</em>
@@ -511,12 +792,10 @@
                             </div>
                         </a>
                         <!-- 첫번째줄-2 -->
-                        <a href="#" class="marketing_solutions_1_2 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="marketing_solutions_1_2_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/7970de0ae32ed6be467b5289f68adcea_33294_1.jpg" alt="">
-                                </div>
-                                <div class="marketing_solutions_1_2_detail">
+                        <a href="#" class=" tab_common_selector">
+                            <div class="advertising_pd">
+                                <img src="https://cdn.ibos.kr/design/upload_file/BD2794/7970de0ae32ed6be467b5289f68adcea_33294_1.jpg" alt="">
+                                <div class="tap_consulting_detail">
                                     <span>강남언니</span>
                                     <p>강남언니 앱내 광고</p>
                                     <em>#검색광고</em>
@@ -524,13 +803,11 @@
                             </div>
                         </a>
                         <!-- 첫번째줄-3 -->
-                        <a href="#" class="marketing_solutions_1_3 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="marketing_solutions_1_3_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/7ec954479200fcdac678b17a64d0b4fa_70115_1.png" alt="">
-                                </div>
-                                <div class="marketing_solutions_1_3_detail">
-                                    <span>맘마플래너</span>
+                        <a href="#" class=" tab_common_selector">
+                            <div class="advertising_pd">
+                                <img src="https://cdn.ibos.kr/design/upload_file/BD2794/7ec954479200fcdac678b17a64d0b4fa_70115_1.png" alt="">
+                                <div class="tap_consulting_detail">
+                                    <span>탕탕특공대</span>
                                     <p>맘마플래너 CPP 구좌 광고</p>
                                     <em>#배너광고</em>
                                 </div>
@@ -538,84 +815,72 @@
                         </a>
                     </div>
                     <!-- 두번째 줄 -->
-                    <div class="marketing_solutions_2">
+                    <div class="consulting_tap_line">
                         <!-- 두번째줄-1 -->
-                        <a href="#" class="marketing_solutions_2_1 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="marketing_solutions_2_1_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/c28ba519ca6a2bb1968c6616a4357dce_32698_1.png" alt="">
-                                </div>
-                                <div class="marketing_solutions_2_1_detail">
-                                    <span>파비</span>
-                                    <p>파비리서치 - AI 번역기 + 머시기머시기</p>
+                        <a href="#" class=" tab_common_selector">
+                            <div class="advertising_pd">
+                                <img src="https://cdn.ibos.kr/design/upload_file/BD2794/c28ba519ca6a2bb1968c6616a4357dce_32698_1.png" alt="">
+                                <div class="tap_consulting_detail">
+                                    <span>썸원</span>
+                                    <p>썸원 - AI 번역기 + 머시기머시기</p>
                                     <em>#배너광고</em>
                                 </div>
                             </div>
                         </a>
                         <!-- 두번째줄-2 -->
-                        <a href="#" class="marketing_solutions_2_2 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="marketing_solutions_2_2_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/6c17cd68e605529c758c0a445a8904d8_5867_1.png" alt="">
-                                </div>
-                                <div class="marketing_solutions_2_2_detail">
-                                    <span>모두닥</span>
-                                    <p>모두닥 맞춤형 게시 광고</p>
+                        <a href="#" class=" tab_common_selector">
+                            <div class="advertising_pd">
+                                <img src="https://cdn.ibos.kr/design/upload_file/BD2794/6c17cd68e605529c758c0a445a8904d8_5867_1.png" alt="">
+                                <div class="tap_consulting_detail">
+                                    <span>쿠팡</span>
+                                    <p>쿠팡 맞춤형 게시 광고</p>
                                     <em>#검색광고</em>
                                 </div>
                             </div>
                         </a>
                         <!-- 두번째줄-3 -->
-                        <a href="#" class="marketing_solutions_2_3 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="marketing_solutions_2_3_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/bc4a4a0e287ecfd1b337310f2d85a968_72738_1.jpg" alt="">
-                                </div>
-                                <div class="marketing_solutions_2_3_detail">
-                                    <span>동아사이언스</span>
-                                    <p>과학동아 광고</p>
+                        <a href="#" class=" tab_common_selector">
+                            <div class="advertising_pd">
+                                <img src="https://cdn.ibos.kr/design/upload_file/BD2794/bc4a4a0e287ecfd1b337310f2d85a968_72738_1.jpg" alt="">
+                                <div class="tap_consulting_detail">
+                                    <span>넷플</span>
+                                    <p>수학동아 광고</p>
                                     <em>#콘텐츠광고</em>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <!-- 세번째 줄 -->
-                    <div class="marketing_solutions_3">
+                    <div class="consulting_tap_line">
                         <!-- 세번째줄-1 -->
-                        <a href="#" class="marketing_solutions_3_1 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="marketing_solutions_3_1_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/103355176db51758e4ebcd36b2384ffd_87024_1.jpg" alt="">
-                                </div>
-                                <div class="marketing_solutions_3_1_detail">
+                        <a href="#" class=" tab_common_selector ">
+                            <div class="advertising_pd">
+                                <img src="https://cdn.ibos.kr/design/upload_file/BD2794/103355176db51758e4ebcd36b2384ffd_87024_1.jpg" alt="">
+                                <div class="tap_consulting_detail">
                                     <span>스타일쉐어</span>
-                                    <p>스타일쉐어 광고상품 소개서</p>
+                                    <p>에이블리 광고상품 소개서</p>
                                     <em>#배너광고</em>
                                 </div>
                             </div>
                         </a>
                         <!-- 세번째줄-2 -->
-                        <a href="#" class="marketing_solutions_3_2 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="marketing_solutions_3_2_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/4356429cac1fd199c3e8429d3d5638fb_48753_1.png" alt="">
-                                </div>
-                                <div class="marketing_solutions_3_2_detail">
+                        <a href="#" class=" tab_common_selector ">
+                            <div class="advertising_pd">
+                                <img src="https://cdn.ibos.kr/design/upload_file/BD2794/4356429cac1fd199c3e8429d3d5638fb_48753_1.png" alt="">
+                                <div class="tap_consulting_detail">
                                     <span>놀이의발견</span>
-                                    <p>놀이의발견 광고 상품</p>
+                                    <p>놀이터 광고 상품</p>
                                     <em>#배너광고</em>
                                 </div>
                             </div>
                         </a>
                         <!-- 세번째줄-3 -->
-                        <a href="#" class="marketing_solutions_3_3 tab_common_selector">
-                            <div class="advertising_padding">
-                                <div class="marketing_solutions_3_3_img">
-                                    <img src="https://cdn.ibos.kr/design/upload_file/BD2794/b9310f442345449f821c52fe9cd4615f_61608_1.png" alt="">
-                                </div>
-                                <div class="marketing_solutions_3_3_detail">
+                        <a href="#" class=" tab_common_selector ">
+                            <div class="advertising_pd">
+                                <img src="https://cdn.ibos.kr/design/upload_file/BD2794/b9310f442345449f821c52fe9cd4615f_61608_1.png" alt="">
+                                <div class="tap_consulting_detail">
                                     <span>중고나라</span>
-                                    <p>중고나라 광고 상품</p>
+                                    <p>강남언니 광고 상품</p>
                                     <em>#배너광고</em>
                                 </div>
                             </div>
@@ -624,7 +889,44 @@
                 </div>
             </div>
         </div>
-        
     </div>
+    <script>
+        /* swiper */
+var swiper = new Swiper('.mySwiper', {
+    loop: true,
+    slidesPerView: 1,
+    direction: 'horizontal',
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
+});
+
+/* 탭 */
+document.addEventListener('DOMContentLoaded', function() {
+    // 초기 설정: advertising_product 탭 콘텐츠만 보이게 설정
+    showTab('advertising_product');
+
+    // 탭 클릭 이벤트 설정
+    document.querySelectorAll('.tab-link').forEach(function(tab) {
+        tab.addEventListener('click', function(event) {
+            event.preventDefault(); // 링크 클릭 시 페이지 이동 방지
+            const targetClass = this.getAttribute('data-target');
+            showTab(targetClass);
+        });
+    });
+});
+
+function showTab(className) {
+    // 모든 탭 콘텐츠를 숨김
+    document.querySelectorAll('.tab-content').forEach(function(content) {
+        content.style.display = 'none';
+    });
+
+    // 선택한 탭 콘텐츠만 표시
+    document.querySelector('.' + className).style.display = 'block';
+}
+    </script>
 </body>
 </html>
